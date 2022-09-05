@@ -14,7 +14,7 @@
             </div>
 
             <div>
-                 <div class="mb-3">
+                <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
 
                     <input
@@ -51,6 +51,12 @@
                     >
                 </div>
 
+                <router-link to="/register-hospital">
+                    <span class="text-danger text-underline">
+                        Register as a hospital
+                    </span>
+                </router-link>
+
                 <div class="d-flex justify-content-center mt-5">
                     <button
                         type="submit"
@@ -65,5 +71,5 @@
     </div>
 </template>
 
-<script src="../../register.js"></script>
+<script src="../../js/auth/register.js"></script>
 

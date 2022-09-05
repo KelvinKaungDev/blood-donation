@@ -1,5 +1,5 @@
 import axios from 'axios'
-import register from '../../public/img/register.jpg'
+import register from '../../../public/img/register.jpg'
 
 export default {
     name : "RegisterView",
