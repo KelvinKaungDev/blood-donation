@@ -17,6 +17,8 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "@fortawesome/free-solid-svg-icons": "^6.2.0",
+        "@fortawesome/vue-fontawesome": "^3.0.1",
         "@vitejs/plugin-vue": "^3.0.3",
         "vue": "^3.2.36",
         "vue-loader": "^17.0.0",

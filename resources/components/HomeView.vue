@@ -12,7 +12,9 @@
                             Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
                         </p>
                     </div>
-                    <button class="btn btn-lg w-75 btn-outline-fg-primary hero-btn" type="button">Register</button>
+                    <router-link to="/register" class="btn btn-lg w-75 btn-outline-fg-primary hero-btn" :class="$route.name == 'register' ? 'nav-underline' : ''">
+                        Register
+                    </router-link>
                 </div>
             </div>
 
@@ -23,4 +25,4 @@
     </div>
 </template>
 
-<script src="../home.js"></script>
+<script src="../js/home.js"></script>

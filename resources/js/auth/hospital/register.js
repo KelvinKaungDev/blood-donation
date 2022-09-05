@@ -1,21 +1,22 @@
 import axios from 'axios'
-import loginImg from '../../public/img/login1.jpg'
+import register from '../../../../public/img/hospital.jpg'
 
 export default {
-    name : 'LoginView',
+    name : "HospitalRegister",
     data () {
         return {
-            loginImg   : loginImg,
+            registerImg: register,
             errorStatus: false,
             userData   : {
+                name    : '',
                 email   : '',
                 password: ''
-            },
+            }
         }
     },
     methods: {
-        login () {
-            axios.post('http://127.0.0.1:8000/api/login', this.userData)
+        register () {
+            axios.post('http://127.0.0.1:8000/api/register', this.userData)
             .then(response => {
                 history.back();
             })
@@ -25,3 +26,4 @@ export default {
         }
     }
 }
+

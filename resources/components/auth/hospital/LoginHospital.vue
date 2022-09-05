@@ -8,7 +8,7 @@
         <div class="col-md-5 mt-5 m-5">
 
             <h2 class="mb-5">
-                Login <span class="text-underline"> To Donate </span>
+                Login <span class="text-underline"> as Hospital </span>
             </h2>
 
             <div class="alert alert-danger" role="alert" v-show="errorStatus">
@@ -18,16 +18,15 @@
             <div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="name" class="form-label">Hospital ID</label>
 
                     <input
                         required
-                        id="email"
-                        type="email"
+                        id="name"
+                        type="text"
                         class="form-control"
-                        v-model="userData.email"
+                        v-model="userData.name"
                     >
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
 
                 <div class="mb-3">
@@ -57,4 +56,4 @@
 
 </template>
 
-<script src="../../login.js"></script>
+<script src="../../../js/auth/hospital/login.js"></script>

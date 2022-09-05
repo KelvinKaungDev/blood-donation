@@ -1,11 +1,11 @@
-.register-img, .login-img{
+.register-img, .home-img {
     width: 90%;
     height: 90%;
 }
 
-.home-img {
-    width: 90%;
-    height: 90%;
+.login-img {
+    width: 100%;
+    height: 100%;
 }
 
 .text-underline {
@@ -48,7 +48,7 @@
 .hero-btn:hover:before
 {
     z-index: -1;
-     transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .btn-outline-fg-primary
@@ -67,5 +67,5 @@
 .outline-fg-primary-hover:hover
 {
      color: white !important;
-     background-color: #125F50 !important;
+     background-color: #ff4441 !important;
 }
