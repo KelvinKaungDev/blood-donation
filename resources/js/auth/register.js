@@ -15,10 +15,10 @@ export default {
         }
     },
     methods: {
-        register () {
-            axios.post('http://127.0.0.1:8000/api/register', this.userData)
+        userRegister () {
+            axios.post('http://127.0.0.1:8000/api/user-register', this.userData)
             .then(response => {
-                history.back();
+               console.log(response.data)
             })
             .catch(error => {
                 this.errorStatus = true

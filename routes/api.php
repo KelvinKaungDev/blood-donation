@@ -1,19 +1,26 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\BloodRequestController;
+use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RegisterToDonateController;
+use App\Http\Controllers\UserController;
+use App\Http\Requests\BloodRequest;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
+Route::get('user', [UserController::class, 'showAll']);
+Route::delete('user-delete', [UserController::class, 'delete']);
+Route::post('user-login', [LoginController::class, 'login']);
+Route::post('user-register', [RegisterController::class, 'store']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('hospital', [HospitalController::class, 'show']);
+Route::post('hospital-login', [LoginController::class, 'hospitalLogin']);
+Route::post('hospital-register', [RegisterController::class, 'registerHospital']);
+
+Route::post('donation-register', [RegisterToDonateController::class, 'store']);
+
+Route::post('blood-request', [BloodRequestController::class, 'submit']);
+
+Route::get('get-request-history', [BloodRequestController::class, 'show']);
+

@@ -25,33 +25,27 @@
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body table-responsive p-0">
-                        <table class="table table-hover text-nowrap text-center">
-                        <thead>
-                            <tr>
-                            <th>Date</th>
-                            <th>Blood Type</th>
-                            <th>Volume</th>
-                            <th>State</th>
-                            <th>Emergency</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>5/09/2022</td>
-                                <td>B</td>
-                                <td>5</td>
-                                <td>Rejected</td>
-                                <td>N/A</td>
-                            </tr>
-
-                            <tr>
-                                <td>5/09/2022</td>
-                                <td>B</td>
-                                <td>5</td>
-                                <td>Approved</td>
-                                <td>True</td>
-                            </tr>
-                        </tbody>
+                        <table class="table text-center">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Blood Type</th>
+                                <th scope="col">Volume</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">State</th>
+                                <th scope="col">Emergency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="detail in details" :key="detail.id">
+                                    <th scope="row">{{ detail.id }}</th>
+                                    <td>{{ detail.blood_type }}</td>
+                                    <td>{{ detail.volume }}</td>
+                                    <td>{{ detail.created_at }}</td>
+                                    <td>{{ detail.state ? detail.state : 'Pending' }}</td>
+                                    <td>{{ detail.emergency }}</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                     </div>
