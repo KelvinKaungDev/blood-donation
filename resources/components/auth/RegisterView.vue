@@ -60,7 +60,7 @@
                 <div class="d-flex justify-content-center mt-5">
                     <button
                         type="submit"
-                        @click="register()"
+                        @click="userRegister()"
                         class="btn btn-outline-fg-primary w-75 p-3 hero-btn active"
                     >
                         Register

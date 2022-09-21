@@ -8,17 +8,18 @@ export default {
             registerImg: register,
             errorStatus: false,
             userData   : {
-                name    : '',
-                email   : '',
-                password: ''
+                name       : '',
+                email      : '',
+                password   : '',
+                hospital_id: '',
             }
         }
     },
     methods: {
-        register () {
-            axios.post('http://127.0.0.1:8000/api/register', this.userData)
+        registerHospital () {
+            axios.post('http://127.0.0.1:8000/api/hospital-register', this.userData)
             .then(response => {
-                history.back();
+                console.log(response.data.result)
             })
             .catch(error => {
                 this.errorStatus = true

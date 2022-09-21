@@ -8,16 +8,16 @@ export default {
             loginImg   : loginImg,
             errorStatus: false,
             userData   : {
-                email   : '',
-                password: ''
+                password   : '',
+                hospital_id: '',
             },
         }
     },
     methods: {
-        login () {
-            axios.post('http://127.0.0.1:8000/api/login', this.userData)
+        hospitalLogin () {
+            axios.post('http://127.0.0.1:8000/api/hospital-login', this.userData)
             .then(response => {
-                history.back();
+                console.log(response.data)
             })
             .catch(error => {
                 this.errorStatus = true

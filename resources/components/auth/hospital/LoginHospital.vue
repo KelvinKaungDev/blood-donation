@@ -12,7 +12,7 @@
             </h2>
 
             <div class="alert alert-danger" role="alert" v-show="errorStatus">
-                This Email and Password do not match
+                This ID and Password do not match
             </div>
 
             <div>
@@ -25,7 +25,7 @@
                         id="name"
                         type="text"
                         class="form-control"
-                        v-model="userData.name"
+                        v-model="userData.hospital_id"
                     >
                 </div>
 
@@ -44,7 +44,7 @@
                 <div class="d-flex justify-content-center mt-5">
                     <button
                         type="submit"
-                        @click="login()"
+                        @click="hospitalLogin()"
                         class="btn btn-outline-fg-primary w-75 p-3 hero-btn active"
                     >
                         Login

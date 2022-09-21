@@ -30,42 +30,32 @@
                             <tr>
                             <th>ID</th>
                             <th>User Name</th>
-                            <th>Email</th>
-                            <th>Phone Number</th>
-                            <th>Address</th>
+                            <th>User Age</th>
+                            <th>Gender</th>
+                            <th>Blood Type</th>
+                            <th>Approve</th>
+
                             <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <td>1</td>
-                            <td>U Si Thu</td>
-                            <td>sithu@gmail.com</td>
-                            <td>09796789321</td>
-                            <td>Yangon</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>2</td>
-                            <td>Daw Yoon Mi Thaw</td>
-                            <td>yoon@gmail.com</td>
-                            <td>09976777499</td>
-                            <td>Yangon</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
+                            <tr v-for="detail in details" :key="detail.id">
+                                <td>{{ detail.id }}</td>
+                                <td>{{ detail.name }}</td>
+                                <td>{{ detail.age }}</td>
+                                <td>{{ detail.gender }}</td>
+                                <td>{{ detail.blood_type }}</td>
+                                <td>{{ detail.approve }}</td>
+
+                                <td>
+                                    <button class="btn btn-sm bg-dark text-white mr-2">
+                                        <font-awesome-icon icon="fa-solid fa-pen-to-square" />
+                                    </button>
+
+                                    <button class="btn btn-sm bg-danger text-white">
+                                        <font-awesome-icon icon="fa-solid fa-trash" />
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                         </table>

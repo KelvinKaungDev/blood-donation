@@ -1,3 +1,4 @@
+import axios from 'axios'
 import donationImg from '../../public/img/donation.jpg'
 
 export default {
@@ -7,16 +8,18 @@ export default {
             donationImg : donationImg,
             errorStatus: false,
             userData   : {
-                email   : '',
-                password: ''
+                name      : '',
+                age       : '',
+                gender    : '',
+                blood_type: '',
             },
         }
     },
     methods: {
-        login () {
-            axios.post('http://127.0.0.1:8000/api/login', this.userData)
+        registerToDonate () {
+            axios.post('http://127.0.0.1:8000/api/donation-register', this.userData)
             .then(response => {
-                history.back();
+                console.log(response.data)
             })
             .catch(error => {
                 this.errorStatus = true

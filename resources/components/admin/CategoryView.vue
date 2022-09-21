@@ -10,7 +10,7 @@
                     <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                        <button class="btn btn-sm btn-outline-dark">Add Category</button>
+                            <button class="btn btn-sm btn-outline-dark">Add Hospital</button>
                         </h3>
 
                         <div class="card-tools">
@@ -32,71 +32,26 @@
                             <tr>
                             <th>ID</th>
                             <th>Hospital Name</th>
-                            <th>Ph Number</th>
-                            <th>Location</th>
+                            <th>Hospital ID</th>
+                            <th>Email</th>
                             <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <td>1</td>
-                            <td>Vegatable</td>
-                            <td>09773458236</td>
-                            <td>Bangkok</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
+                            <tr v-for="detail in details" :key="detail.id">
+                                <td>{{ detail.id }}</td>
+                                <td>{{ detail.name }}</td>
+                                <td>{{ detail.hospital_id }}</td>
+                                <td>{{ detail.email }}</td>
+                                <td>
+                                    <button class="btn btn-sm bg-dark text-white mr-2">
+                                        <font-awesome-icon icon="fa-solid fa-pen-to-square" />
+                                    </button>
 
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>2</td>
-                            <td>Seafood</td>
-                            <td>09773458236</td>
-                            <td>Bangkok</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
-
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>3</td>
-                            <td>Thailand</td>
-                            <td>09773458236</td>
-                            <td>Bangkok</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
-
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>4</td>
-                            <td>USA</td>
-                            <td>09773458236</td>
-                            <td>Bangkok</td>
-                            <td>
-                                <button class="btn btn-sm bg-dark text-white mr-2">
-                                    <font-awesome-icon icon="fa-solid fa-pen-to-square" />
-                                </button>
-
-                                <button class="btn btn-sm bg-danger text-white">
-                                    <font-awesome-icon icon="fa-solid fa-trash" />
-                                </button>
-                            </td>
+                                    <button class="btn btn-sm bg-danger text-white">
+                                        <font-awesome-icon icon="fa-solid fa-trash" />
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                         </table>

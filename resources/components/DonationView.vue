@@ -11,6 +11,10 @@
                 Steps <span class="text-underline"> To Donate Your Blood</span>
             </h2>
 
+            <div class="alert alert-danger" role="alert" v-show="errorStatus">
+                Your age does not match
+            </div>
+
             <div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
@@ -34,7 +38,7 @@
                         type="text"
                         placeholder="age"
                         class="form-control"
-                        v-model="userData.name"
+                        v-model="userData.age"
                     >
                 </div>
 
@@ -47,27 +51,27 @@
                         type="text"
                         placeholder="gender"
                         class="form-control"
-                        v-model="userData.name"
+                        v-model="userData.gender"
                     >
                 </div>
 
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
+                    <label for="name" class="form-label">Blood Type</label>
 
                     <input
                         required
-                        id="email"
-                        type="email"
-                        placeholder="email"
+                        id="name"
+                        type="text"
+                        placeholder="Blood Type"
                         class="form-control"
-                        v-model="userData.email"
+                        v-model="userData.blood_type"
                     >
                 </div>
 
                 <div class="d-flex justify-content-center mt-5">
                     <button
                         type="submit"
-                        @click="login()"
+                        @click="registerToDonate()"
                         class="btn btn-outline-fg-primary w-75 p-3 hero-btn active"
                     >
                         Submit
