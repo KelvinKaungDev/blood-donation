@@ -19,13 +19,6 @@
                         </li>
 
                         <li class="nav-item">
-                            <router-link to="/donation-status" class="nav-link" :class="$route.name == 'user' ? 'text-white' : ''">
-                                <font-awesome-icon icon="fa-solid fa-users" class="mr-3" />
-                                Donation Status
-                            </router-link>
-                        </li>
-
-                        <li class="nav-item">
                             <router-link to="/" class="nav-link">
                                 <font-awesome-icon icon="fa-solid fa-backward" class="mr-3" />
                                 Back

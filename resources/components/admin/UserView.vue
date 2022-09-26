@@ -9,6 +9,14 @@
                 <div class="col-12">
                     <div class="card">
                     <div class="card-header">
+                        <div class="alert alert-danger" role="alert" v-show="errorStatus">
+                            This Hospital ID do not match
+                        </div>
+
+                        <div class="alert alert-success" role="alert" v-show="successStatus">
+                            Request Successfully
+                        </div>
+
                         <h3 class="card-title">User Table</h3>
 
                         <div class="card-tools">
@@ -31,7 +39,7 @@
                             <th>ID</th>
                             <th>User Name</th>
                             <th>User Age</th>
-                            <th>Gender</th>
+                            <th>Email</th>
                             <th>Blood Type</th>
                             <th>Approve</th>
 
@@ -43,17 +51,23 @@
                                 <td>{{ detail.id }}</td>
                                 <td>{{ detail.name }}</td>
                                 <td>{{ detail.age }}</td>
-                                <td>{{ detail.gender }}</td>
+                                <td>{{ detail.email }}</td>
                                 <td>{{ detail.blood_type }}</td>
-                                <td>{{ detail.approve }}</td>
+                                <td>{{ detail.approve ? detail.approve : 'Pending' }}</td>
 
                                 <td>
-                                    <button class="btn btn-sm bg-dark text-white mr-2">
+                                    <button
+                                        @click="editDonatorRequest(detail.id)"
+                                        class="btn btn-sm bg-dark text-white mr-2"
+                                    >
                                         <font-awesome-icon icon="fa-solid fa-pen-to-square" />
                                     </button>
 
-                                    <button class="btn btn-sm bg-danger text-white">
-                                        <font-awesome-icon icon="fa-solid fa-trash" />
+                                    <button
+                                        @click="deleteUser(detail.id)"
+                                        class="btn btn-sm bg-danger text-white"
+                                     >
+                                        <font-awesome-icon icon="fa-solid fa-trash"/>
                                     </button>
                                 </td>
                             </tr>

@@ -17,7 +17,12 @@ export default {
         hospitalLogin () {
             axios.post('http://127.0.0.1:8000/api/hospital-login', this.userData)
             .then(response => {
-                console.log(response.data)
+                if(response.data.result == false)
+                {
+                    this.errorStatus = true
+                } else {
+                    this.$router.push('request-blood');
+                }
             })
             .catch(error => {
                 this.errorStatus = true

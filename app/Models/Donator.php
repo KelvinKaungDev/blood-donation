@@ -14,7 +14,7 @@ class Donator extends Model
     protected $fillable = [
         'age',
         'name',
-        'gender',
+        'email',
         'approve',
         'blood_type',
         'created_at'

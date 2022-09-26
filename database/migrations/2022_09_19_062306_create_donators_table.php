@@ -13,9 +13,9 @@ return new class extends Migration
             $table->id();
             $table -> string('name');
             $table -> string('age');
-            $table -> string('gender');
+            $table -> string('email');
             $table -> string('blood_type');
-            $table -> boolean('approve') -> default(false);
+            $table -> string('approve') -> nullable();
 
             $table->timestamp('created_at') -> useCurrent();
         });

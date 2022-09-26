@@ -30,28 +30,23 @@
                             <tr>
                             <th>ID</th>
                             <th>User Name</th>
-                            <th>Donation Date</th>
-                            <th>Time</th>
-                            <th>Liter</th>
+                            <th>User Age</th>
+                            <th>Email</th>
+                            <th>Blood Type</th>
+                            <th>Date</th>
+                            <th>State</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Kelvin</td>
-                                <td>5/09/2022</td>
-                                <td>11PM</td>
-                                <td>1</td>
+                            <tr v-for="detail in details" :key="detail.id">
+                                <td>{{ detail.id }}</td>
+                                <td>{{ detail.name }}</td>
+                                <td>{{ detail.age }}</td>
+                                <td>{{ detail.email }}</td>
+                                <td>{{ detail.blood_type }}</td>
+                                <td>{{ detail.created_at }}</td>
+                                <td>{{ detail.approve ? detail.approve : 'Pending' }}</td>
                             </tr>
-
-                            <tr>
-                                <td>2</td>
-                                <td>Kelvin</td>
-                                <td>5/12/2022</td>
-                                <td>7PM</td>
-                                <td>1</td>
-                            </tr>
-
                         </tbody>
                         </table>
                     </div>

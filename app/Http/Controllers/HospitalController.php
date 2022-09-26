@@ -15,4 +15,13 @@ class HospitalController extends Controller
             'result' => $result
         ]);
     }
+
+    public function delete($id)
+    {
+        $result = HospitalService::delete($id);
+
+        return response() -> json([
+            'result' => $result
+        ]);
+    }
 }

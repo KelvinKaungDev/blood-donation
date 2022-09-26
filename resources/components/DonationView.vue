@@ -43,15 +43,15 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="name" class="form-label">Gender</label>
+                    <label for="name" class="form-label">Email</label>
 
                     <input
                         required
                         id="name"
-                        type="text"
-                        placeholder="gender"
+                        type="email"
+                        placeholder="Email"
                         class="form-control"
-                        v-model="userData.gender"
+                        v-model="userData.email"
                     >
                 </div>
 

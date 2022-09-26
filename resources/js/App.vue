@@ -38,7 +38,7 @@
 
                                 <li>
                                     <router-link
-                                        to="/user-dashboard"
+                                        to="/donation-history"
                                         class="text-danger nav-link dropdown-item"
                                     >
                                         User Dashboard
@@ -48,7 +48,7 @@
 
                                 <li>
                                     <router-link
-                                        to="/hospital-dashboard"
+                                        to="/request-history"
                                         class="text-danger nav-link dropdown-item"
                                     >
                                         Hospital Dashboard
@@ -61,7 +61,7 @@
 
                                 <li>
                                     <router-link
-                                        to="/admin"
+                                        to="/hospital-list"
                                         class="text-danger nav-link dropdown-item"
                                     >
                                         Admin Dashboard

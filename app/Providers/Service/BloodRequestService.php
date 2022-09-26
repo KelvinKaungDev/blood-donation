@@ -25,4 +25,19 @@ class BloodRequestService {
     {
         return DB::select( DB::raw("SELECT * FROM blood_requests") );
     }
+
+    public static function getById($id)
+    {
+        return DB::select( DB::raw("SELECT * FROM blood_requests where id = $id"));
+    }
+
+    public static function update($request)
+    {
+        return DB::update('UPDATE blood_requests set state = ? where id = ?', [$request -> state , $request -> id]);
+    }
+
+    public static function delete($id)
+    {
+        return DB::delete(DB::raw("DELETE FROM blood_requests where id = $id "));
+    }
 }

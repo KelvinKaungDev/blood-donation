@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DonatorUpdateRequest;
 use App\Providers\Service\UserService;
 
 class UserController extends Controller
@@ -18,10 +19,28 @@ class UserController extends Controller
 
     public function delete($id)
     {
-        UserService::delete($id);
+        $result =  UserService::delete($id);
 
         return response() -> json([
-            'result' => 'Delete Successfully'
+            'result' => $result
+        ]);
+    }
+
+    public function getById($id)
+    {
+        $result = UserService::getById($id);
+
+        return response() -> json([
+            'result' => $result
+        ]);
+    }
+
+    public function update(DonatorUpdateRequest $request)
+    {
+        $result = UserService::update($request);
+
+        return response() -> json([
+            'result' => $result
         ]);
     }
 

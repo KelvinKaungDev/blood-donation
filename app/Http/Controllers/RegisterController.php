@@ -22,19 +22,19 @@ class RegisterController extends Controller
 
     public function store(RegisterRequest $request)
     {
-        ServiceRegisterService::register($request);
+        $result = ServiceRegisterService::register($request);
 
         return response() -> json([
-            'result' => 'Created Successfully'
+            'result' => $result
         ]);
     }
 
     public function registerHospital(HospitalRequest $request)
     {
-        ServiceRegisterService::hospitalRegister($request);
+        $result = ServiceRegisterService::hospitalRegister($request);
 
         return response() -> json([
-            'result' => 'Register Successfully as a Hospital'
+            'result' => $result
         ]);
     }
 
@@ -43,35 +43,16 @@ class RegisterController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

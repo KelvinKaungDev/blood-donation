@@ -7,24 +7,23 @@ export default {
         return {
             loginImg   : loginImg,
             errorStatus: false,
-            userData   : [
+            details   : [
 
             ]
         }
     },
     methods: {
         showHistory () {
-            console.log('hi')
-            // axios.get('http://127.0.0.1:8000/api/get-request-history')
-            // .then(response => {
-            //     console.log('hi')
-            // })
-            // .catch(error => {
-            //     this.errorStatus = true
-            // })
+            axios.get('http://127.0.0.1:8000/api/user')
+            .then(response => {
+                this.details = response.data.result
+            })
+            .catch(error => {
+                this.errorStatus = true
+            })
         }
     },
     mounted () {
-        showHistory();
+        this.showHistory();
     }
 }
