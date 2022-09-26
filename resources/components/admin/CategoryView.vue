@@ -31,26 +31,35 @@
                         <thead>
                             <tr>
                             <th>ID</th>
-                            <th>Hospital Name</th>
+                            <th>Blood Type</th>
                             <th>Hospital ID</th>
-                            <th>Email</th>
+                            <th>Emergency</th>
+                            <th>State</th>
                             <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr v-for="detail in details" :key="detail.id">
                                 <td>{{ detail.id }}</td>
-                                <td>{{ detail.name }}</td>
+                                <td>{{ detail.blood_type }}</td>
                                 <td>{{ detail.hospital_id }}</td>
-                                <td>{{ detail.email }}</td>
+                                <td>{{ detail.emergency }}</td>
+                                <td>{{ detail.state ? detail.state : 'Pending' }}</td>
                                 <td>
-                                    <button class="btn btn-sm bg-dark text-white mr-2">
+                                    <button
+                                        @click="editHospitalBloodRequest(detail.id)"
+                                        class="btn btn-sm bg-dark text-white mr-2"
+                                    >
                                         <font-awesome-icon icon="fa-solid fa-pen-to-square" />
                                     </button>
 
-                                    <button class="btn btn-sm bg-danger text-white">
-                                        <font-awesome-icon icon="fa-solid fa-trash" />
+                                    <button
+                                        @click="requestDelete(detail.id)"
+                                        class="btn btn-sm bg-danger text-white"
+                                     >
+                                        <font-awesome-icon icon="fa-solid fa-trash"/>
                                     </button>
+
                                 </td>
                             </tr>
                         </tbody>

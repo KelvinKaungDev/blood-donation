@@ -32,10 +32,10 @@ class LoginController extends Controller
 
     public function hospitalLogin(HospitalLoginRequest $request)
     {
-        LoginService::hospitalLogin($request);
+        $result = LoginService::hospitalLogin($request);
 
         return response() -> json([
-            'result' => 'Login Successfully as Hospital'
+            'result' => $result
         ]);
     }
 

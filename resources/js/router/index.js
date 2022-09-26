@@ -45,7 +45,7 @@ const routes = [
     component: UserView
   },
   {
-    path     : '/admin-profile',
+    path     : '/admin-profile/:id',
     name     : 'admin-profile',
     component: EditProfileView
   },
@@ -55,7 +55,7 @@ const routes = [
     component: CategoryView
   },
   {
-    path     : '/edit-hospital',
+    path     : '/edit-hospital/:id',
     name     : 'edit-hospital',
     component: EditHospitalView
   },

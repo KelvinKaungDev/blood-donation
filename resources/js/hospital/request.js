@@ -20,9 +20,11 @@ export default {
             .then(response => {
                 if(response.data.result == false)
                 {
-                    this.errorStatus = true
+                    this.errorStatus   = true
+                    this.successStatus = false
                 } else {
                     this.successStatus = true
+                    this.errorStatus   = false
                 }
             })
             .catch(error => {

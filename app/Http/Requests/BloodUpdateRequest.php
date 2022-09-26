@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RegisterToDonateRequest extends FormRequest
+class BloodUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -16,13 +16,16 @@ class RegisterToDonateRequest extends FormRequest
         return true;
     }
 
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, mixed>
+     */
     public function rules()
     {
         return [
-            'name'       => 'required',
-            'age'        => 'required',
-            'email'      => 'required',
-            'blood_type' => 'required',
+            'id'    => 'required',
+            'state' => 'required',
         ];
     }
 }

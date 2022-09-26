@@ -19,7 +19,7 @@ export default {
         registerHospital () {
             axios.post('http://127.0.0.1:8000/api/hospital-register', this.userData)
             .then(response => {
-                console.log(response.data.result)
+                this.$router.push('request-blood');
             })
             .catch(error => {
                 this.errorStatus = true

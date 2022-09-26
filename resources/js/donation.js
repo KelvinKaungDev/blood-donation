@@ -10,7 +10,7 @@ export default {
             userData   : {
                 name      : '',
                 age       : '',
-                gender    : '',
+                email     : '',
                 blood_type: '',
             },
         }
@@ -19,7 +19,7 @@ export default {
         registerToDonate () {
             axios.post('http://127.0.0.1:8000/api/donation-register', this.userData)
             .then(response => {
-                console.log(response.data)
+                this.$router.push('donation-history');
             })
             .catch(error => {
                 this.errorStatus = true

@@ -19,6 +19,6 @@ class LoginService {
         $password = $request -> password;
         $id       = $request -> hospital_id;
 
-        DB::select('select * from hospitals where hospital_id = ? AND password = ?', [$id, $password]);
+        return DB::select('select * from hospitals where hospital_id = ? AND password = ?', [$id, $password]);
     }
 }

@@ -21,10 +21,10 @@ class RegisterToDonateController extends Controller
 
     public function store(RegisterToDonateRequest $request)
     {
-        RegisterService::donationRegister($request);
+        $result = RegisterService::donationRegister($request);
 
         return response() -> json([
-            'resutlt' => 'Submit Successfully'
+            'resutlt' => $result
         ]);
     }
 

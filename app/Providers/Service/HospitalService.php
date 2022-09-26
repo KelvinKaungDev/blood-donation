@@ -12,6 +12,12 @@ class HospitalService {
 
     public static function delete($id)
     {
-        DB::delete( DB::raw("DELETE * FROM hospitals where id = ?" , [$id]));
+        DB::delete( DB::raw("DELETE FROM hospitals where id = $id"));
     }
+
+    public static function getById($id)
+    {
+        return DB::select('select * from users where id = ?', [$id]);
+    }
+
 }
